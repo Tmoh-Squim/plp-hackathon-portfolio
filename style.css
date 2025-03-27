@@ -12,7 +12,9 @@ body{
     position: relative;
     font-family: druk !important;
 }
-
+a{
+    text-decoration: none;
+}
 /**navbar styles*/
 nav{
     display: flex;
@@ -24,9 +26,9 @@ nav{
 }
 nav h1{
     color: #fff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: cursive;
     font-style: italic;
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
 }
 nav h1:hover{
@@ -42,10 +44,11 @@ main{
     padding-bottom: 10px;
 }
 .about{
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    align-items: center;
     display: flex;
+    align-items: center;
+    align-content: center;
     margin: 0;
     position: relative;
 }
@@ -64,13 +67,14 @@ main{
 }
 /*project section styles*/
 .work {
-    padding-top: 28px;
+    padding-top: 10px;
 }
 .heading{
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 15px;
     border-bottom: gray;
     border-bottom-width: 2px;
+    border-bottom-style: solid; 
 }
 .heading h1{
     color: #fff;
@@ -114,8 +118,156 @@ main{
     top: 0;
     transform: translateY(50%);
     width: 400px;
+    z-index: -50;
     background-color: transparent;
-    animation: rotateHero 10s linear infinite; /* Apply the animation */
+    animation: rotateHero 15s linear infinite; /* Apply the animation */
+}
+.social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.social a{
+    font-size: 30px;
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff;
+}
+.social a:first-child{
+    animation: stroke-color-change 3s infinite alternate; /* Add an animation */
+}
+.social a:nth-child(2){
+    animation: stroke-color-change2 3s infinite alternate; /* Add an animation */
+}
+.social a:last-child{
+    animation: stroke-color-change3 3s infinite alternate; /* Add an animation */
+
+}
+form h1{
+    color: #fff;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    font-size: 100px;
+}
+form h1 span{
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+}
+form label{
+    color: white;
+    font-size: 30px;
+}
+form input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border-bottom-color: gray;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-top: none; /* Remove top border */
+    border-left: none; /* Remove left border */
+    border-right: none; /* Remove right border */
+    background-color: transparent;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 20px;
+}
+form button {
+    justify-self: end;
+    padding: 20px 15px; /* Shorthand for top, right, bottom, left */
+    border: none;
+    width: 15%;
+    border-radius: 8px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 800;
+    background-color: gray; /* Or your initial background */
+    background-image: linear-gradient(to right, aqua 0%, aqua 100%, transparent 100%);
+    background-size: 0% 100%; /* Start with zero width */
+    background-repeat: no-repeat; /* Prevent the gradient from repeating */
+    background-position: left center; /* Start from the left */
+    transition: background-size 0.5s ease-in-out;
+}
+
+form button:hover {
+    background-size: 100% 100%; 
+}
+.getinTouch{
+    padding-top: 200px;
+    border-bottom-color: gray;
+    padding-bottom: 20px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid; /* Or dashed, dotted, etc. */
+}
+.getinTouch h1{
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff;
+    font-size: 100px;
+    margin: 0;
+}
+.getinTouch p{
+    color: #fff;
+    margin: 0;
+    font-size: 55px;
+}
+
+
+footer{
+    display: flex;
+    gap: 30px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    align-items: center;
+}
+footer h1{
+    color: #fff;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 30px;
+    cursor: pointer;
+}
+@keyframes stroke-color-change {
+    0% {
+        -webkit-text-stroke-color: #fff;
+    }
+    50% {
+        -webkit-text-stroke-color: #00ff00; /* Green at 50% */
+    }
+    100% {
+        -webkit-text-stroke-color: #0000ff; /* Blue at 100% */
+    }
+}
+@keyframes stroke-color-change2 {
+    0% {
+        -webkit-text-stroke-color: #00ff00; /* Green at 50% */
+    }
+    50% {
+        -webkit-text-stroke-color: #0000ff; /* Blue at 100% */
+    }
+    100% {
+        -webkit-text-stroke-color: #fff;
+    }
+    
+    
+}
+@keyframes stroke-color-change3 {
+    0% {
+        -webkit-text-stroke-color: #0000ff; /* Blue at 100% */
+    }
+    50% {
+        -webkit-text-stroke-color: #fff;
+    }
+    100% {
+        -webkit-text-stroke-color: #00ff00; /* Green at 50% */
+    }
+    
 }
 @keyframes rotateHero {
     from {
@@ -172,6 +324,17 @@ main{
     .heading h1{
         font-size: 45px;
     }
+    #hero{
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(50%);
+        width: 400px;
+        z-index: -100;
+        background-color: transparent;
+        animation: rotateHero 15s linear infinite; /* Apply the animation */
+    }
+    
 }
 /*
 @media screen and (min-width: 640px) { 
