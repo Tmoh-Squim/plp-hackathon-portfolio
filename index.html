@@ -36,6 +36,29 @@
         <div class="heading">
           <h1 class="">Projects</h1>
         </div>
+        <div class="projects">
+        <div class="project-card">
+          <a href="https:squimstech.vercel.app">
+            <img src="/assets/ecom.png" alt="">
+          </a>
+          <h1>Multivendor</h1>
+        </div>
+         <div class="project-card">
+          <a href="https:squimstech.vercel.app">
+            <img src="/assets/weather_app.png" alt="">
+          </a>
+         </div>
+         <div class="project-card">
+          <a href="https:squimstech.vercel.app">
+            <img src="/assets/hotel.png" alt="">
+          </a>
+         </div>
+         <div class="project-card">
+          <a href="https:squimstech.vercel.app">
+            <img src="/assets/kenchick1.png" alt="">
+          </a>
+         </div>
+        </div>
       </div>
         <h1 class="tech">
           Technology
@@ -229,6 +252,31 @@ cards.forEach((card) => {
           behavior: "smooth",
         });
       };
+
+      function checkSlide() {
+    const projectCards = document.querySelectorAll('.project-card');
+
+    projectCards.forEach((card, index) => {
+        const slideInAt = window.scrollY + window.innerHeight - card.offsetHeight / 3;
+        const cardTop = card.offsetTop;
+        const cardBottom = cardTop + card.offsetHeight;
+
+        const isHalfShown = slideInAt > cardTop;
+        const isNotScrolledPast = window.scrollY < cardBottom;
+
+        if (isHalfShown && isNotScrolledPast) {
+            setTimeout(() => {
+                card.classList.add('slide-in');
+            }, index * 150); // Stagger effect (each card appears after the other)
+        } else {
+            card.classList.remove('slide-in'); // Reset when scrolling back
+        }
+    });
+}
+
+window.addEventListener('scroll', checkSlide);
+checkSlide();
+
     </script>
   </body>
 </html>
