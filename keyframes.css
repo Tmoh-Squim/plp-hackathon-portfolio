@@ -1,0 +1,121 @@
+
+.progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 0%;
+    border-radius: 9999px;
+    background-color: blue; /* Initial background color */
+    z-index: 11;
+    transition: height 0.3s ease-out; /* Keep the smooth height transition */
+    box-shadow: -2px 0 10px rgba(0, 138, 255, 0.7); /* Initial glow/shadow */
+    animation: progressBarColorChange 1s linear infinite; /* Apply the color animation */
+    animation: progressBarGlow 5s linear infinite; /* Apply the color animation */
+}
+
+#hero {
+    position: absolute;
+    right: 10%;
+    top: 0;
+    transform: translateY(50%);
+    width: 400px;
+    z-index: -50;
+    background-color: transparent;
+    animation: rotateHero 15s linear infinite; /* Apply the animation */
+}
+
+.social a:first-child {
+    animation: stroke-color-change 3s infinite alternate; /* Add an animation */
+}
+
+.social a:nth-child(2) {
+    animation: stroke-color-change2 3s infinite alternate; /* Add an animation */
+}
+
+.social a:last-child {
+    animation: stroke-color-change3 3s infinite alternate; /* Add an animation */
+}
+
+
+/* Keyframes */
+@keyframes stroke-color-change {
+    0% {
+        -webkit-text-stroke-color: #fff;
+    }
+    50% {
+        -webkit-text-stroke-color: #00ff00;
+    }
+    100% {
+        -webkit-text-stroke-color: #0000ff;
+    }
+}
+
+@keyframes stroke-color-change2 {
+    0% {
+        -webkit-text-stroke-color: #00ff00;
+    }
+    50% {
+        -webkit-text-stroke-color: #0000ff;
+    }
+    100% {
+        -webkit-text-stroke-color: #fff;
+    }
+}
+
+@keyframes stroke-color-change3 {
+    0% {
+        -webkit-text-stroke-color: #0000ff;
+    }
+    50% {
+        -webkit-text-stroke-color: #fff;
+    }
+    100% {
+        -webkit-text-stroke-color: #00ff00;
+    }
+}
+
+@keyframes rotateHero {
+    from {
+        transform: translateY(50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(50%) rotate(360deg);
+    }
+}
+
+@keyframes progressBarColorChange {
+    0% {
+        background-color: rgb(0, 138, 255);
+    }
+    25% {
+        background-color: limegreen;
+    }
+    50% {
+        background-color: gold;
+    }
+    75% {
+        background-color: tomato;
+    }
+    100% {
+        background-color: rgb(0, 138, 255);
+    }
+}
+
+@keyframes progressBarGlow {
+    0% {
+        background-color: rgb(0, 138, 255);
+    }
+    25% {
+        background-color: limegreen;
+    }
+    50% {
+        background-color: gold;
+    }
+    75% {
+        background-color: tomato;
+    }
+    100% {
+        background-color: rgb(0, 138, 255);
+    }
+}

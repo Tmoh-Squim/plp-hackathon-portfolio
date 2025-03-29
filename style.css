@@ -1,22 +1,24 @@
-:root{
+:root {
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: #0f0f0f;
     min-height: 100vh;
     min-width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     position: relative;
-    font-family: druk !important;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 /**navbar styles*/
-nav{
+nav {
     display: flex;
     padding-left: 50px;
     padding-right: 50px;
@@ -24,26 +26,30 @@ nav{
     padding-bottom: 5px;
     align-items: center;
 }
-nav h1{
+
+nav h1 {
     color: #fff;
     font-family: cursive;
     font-style: italic;
     font-size: 30px;
     cursor: pointer;
 }
-nav h1:hover{
+
+nav h1:hover {
     color: darkblue;
     transition: all;
     transition: 0.3s;
 }
+
 /*main section styles*/
-main{
+main {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 0;
     padding-bottom: 10px;
 }
-.about{
+
+.about {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -52,7 +58,8 @@ main{
     margin: 0;
     position: relative;
 }
-.name{
+
+.name {
     color: #fff;
     display: flex;
     padding: 0;
@@ -60,23 +67,43 @@ main{
     flex-direction: column;
     font-size: 100px;
 }
-.name span{
+
+.name span {
     color: transparent; /* Make the text itself transparent */
     opacity: 1; /* Ensure the element is visible */
     -webkit-text-stroke: 1px #fff; /* Apply the black outline */
 }
+
+.tech {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 100px;
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+}
+
+.tech span {
+    color: #fff;
+    display: flex;
+}
+
 /*project section styles*/
 .work {
     padding-top: 10px;
 }
-.heading{
+
+.heading {
     padding-top: 10px;
     padding-bottom: 15px;
     border-bottom: gray;
     border-bottom-width: 2px;
-    border-bottom-style: solid; 
+    border-bottom-style: solid;
 }
-.heading h1{
+
+.heading h1 {
     color: #fff;
     display: flex;
     padding: 0;
@@ -84,10 +111,12 @@ main{
     flex-direction: column;
     font-size: 100px;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     height: 10px;
 }
-.scrollPath{
+
+.scrollPath {
     position: fixed;
     top: 0;
     right: 0;
@@ -96,70 +125,105 @@ main{
     background-color: black;
     opacity: 20;
 }
-.progressbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 10px;
-    height: 0%;
-    border-radius: 9999px;
-    background-color: blue; /* Initial background color */
-    z-index: 11;
-    transition: height 0.3s ease-out; /* Keep the smooth height transition */
-    box-shadow: -2px 0 10px rgba(0, 138, 255, 0.7); /* Initial glow/shadow */
-    animation: progressBarColorChange 5s linear infinite; /* Apply the color animation */
-    animation: progressBarGlow 5s linear infinite; /* Apply the color animation */
 
-}
-
-#hero{
-    position: absolute;
-    right: 10%;
-    top: 0;
-    transform: translateY(50%);
-    width: 400px;
-    z-index: -50;
-    background-color: transparent;
-    animation: rotateHero 15s linear infinite; /* Apply the animation */
-}
 .social {
     display: flex;
     gap: 10px;
     align-items: center;
 }
-.social a{
+
+.social a {
     font-size: 30px;
     color: transparent; /* Make the text itself transparent */
     opacity: 1; /* Ensure the element is visible */
     -webkit-text-stroke: 1px #fff;
 }
-.social a:first-child{
-    animation: stroke-color-change 3s infinite alternate; /* Add an animation */
-}
-.social a:nth-child(2){
-    animation: stroke-color-change2 3s infinite alternate; /* Add an animation */
-}
-.social a:last-child{
-    animation: stroke-color-change3 3s infinite alternate; /* Add an animation */
 
+
+.techs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 uniform columns */
+    gap: 5%;
+    margin-bottom: 100px;
+    width: 100%;
+    grid-auto-rows: 100vh; /* Each row is full viewport height */
+    height: auto;
+    padding-bottom: 50px;
+    align-items: center; /* Ensures elements expand properly */
 }
-form h1{
+
+.tech-card {
+    
+    opacity: 0;
+    height: 100%; /* Makes each card fill its row */
+    transform: scale(0.8) translateY(-25%); /* Start smaller and higher */
+    transition: opacity 1.0s ease-out, transform 1.5s ease-out;
+    box-sizing: border-box; /* Includes padding & border in height calculation */
+}
+.tech-card.in-view {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* Zoom-in and move into place */
+}
+
+.tech-card.out-of-view {
+    opacity: 0;
+    transform: scale(0.8) translateY(25%); /* Shrinks and moves down when leaving */
+    transition: opacity 0.8s ease-in, transform 1s ease-in;
+}
+.tech-container{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center; /* Centers content */
+    border-top: 2px solid gray;
+    padding: 10px 20px;
+}
+
+.tech-card img {
+    max-width: 100px;
+    height: auto;
+    color: gray;
+}
+
+.tech-card p {
+    color: gray;
+    font-size: 40px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.tech-card h1 {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.tech-card span {
+    color: gray;
+    font-size: 25px;
+}
+
+
+
+form h1 {
     color: #fff;
     display: flex;
-    padding: 0;
-    margin: 0;
     flex-direction: column;
     font-size: 100px;
 }
-form h1 span{
+
+form h1 span {
     color: transparent; /* Make the text itself transparent */
     opacity: 1; /* Ensure the element is visible */
     -webkit-text-stroke: 1px #fff; /* Apply the black outline */
 }
-form label{
+
+form label {
     color: white;
     font-size: 30px;
 }
+
 form input {
     width: 100%;
     height: 50px;
@@ -175,8 +239,8 @@ form input {
     color: white;
     font-size: 20px;
 }
+
 form button {
-    justify-self: end;
     padding: 20px 15px; /* Shorthand for top, right, bottom, left */
     border: none;
     width: 15%;
@@ -186,7 +250,7 @@ form button {
     cursor: pointer;
     font-weight: 800;
     background-color: gray; /* Or your initial background */
-    background-image: linear-gradient(to right, aqua 0%, aqua 100%, transparent 100%);
+    background-image: linear-gradient(to right, rgb(10, 127, 148) 0%, aqua 100%, transparent 100%);
     background-size: 0% 100%; /* Start with zero width */
     background-repeat: no-repeat; /* Prevent the gradient from repeating */
     background-position: left center; /* Start from the left */
@@ -194,30 +258,32 @@ form button {
 }
 
 form button:hover {
-    background-size: 100% 100%; 
+    background-size: 100% 100%;
 }
-.getinTouch{
+
+.getinTouch {
     padding-top: 200px;
     border-bottom-color: gray;
     padding-bottom: 20px;
     border-bottom-width: 2px;
     border-bottom-style: solid; /* Or dashed, dotted, etc. */
 }
-.getinTouch h1{
+
+.getinTouch h1 {
     color: transparent; /* Make the text itself transparent */
     opacity: 1; /* Ensure the element is visible */
     -webkit-text-stroke: 1px #fff;
     font-size: 100px;
     margin: 0;
 }
-.getinTouch p{
+
+.getinTouch p {
     color: #fff;
     margin: 0;
     font-size: 55px;
 }
 
-
-footer{
+footer {
     display: flex;
     gap: 30px;
     padding-left: 50px;
@@ -226,132 +292,166 @@ footer{
     padding-right: 50px;
     align-items: center;
 }
-footer h1{
+
+footer h1 {
     color: #fff;
     font-family: cursive;
     font-style: italic;
     font-size: 30px;
     cursor: pointer;
 }
-@keyframes stroke-color-change {
-    0% {
-        -webkit-text-stroke-color: #fff;
-    }
-    50% {
-        -webkit-text-stroke-color: #00ff00; /* Green at 50% */
-    }
-    100% {
-        -webkit-text-stroke-color: #0000ff; /* Blue at 100% */
-    }
-}
-@keyframes stroke-color-change2 {
-    0% {
-        -webkit-text-stroke-color: #00ff00; /* Green at 50% */
-    }
-    50% {
-        -webkit-text-stroke-color: #0000ff; /* Blue at 100% */
-    }
-    100% {
-        -webkit-text-stroke-color: #fff;
-    }
-    
-    
-}
-@keyframes stroke-color-change3 {
-    0% {
-        -webkit-text-stroke-color: #0000ff; /* Blue at 100% */
-    }
-    50% {
-        -webkit-text-stroke-color: #fff;
-    }
-    100% {
-        -webkit-text-stroke-color: #00ff00; /* Green at 50% */
-    }
-    
-}
-@keyframes rotateHero {
-    from {
-        transform: translateY(50%) rotate(0deg); /* Start with 0 degrees rotation */
-    }
-    to {
-        transform: translateY(50%) rotate(360deg); /* Rotate 360 degrees */
-    }
-}
-@keyframes progressBarColorChange {
-    0% {
-        background-color: rgb(0, 138, 255);
-    }
-    25% {
-        background-color: limegreen;
-    }
-    50% {
-        background-color: gold;
-    }
-    75% {
-        background-color: tomato;
-    }
-    100% {
-        background-color: rgb(0, 138, 255); /* Loop back to the initial color */
-    }
-}
-@keyframes progressBarGlow {
-    0% {
-        background-color: rgb(0, 138, 255);
-    }
-    25% {
-        background-color: limegreen;
-    }
-    50% {
-        background-color: gold;
-    }
-    75% {
-        background-color: tomato;
-    }
-    100% {
-        background-color: rgb(0, 138, 255); /* Loop back to the initial color */
-    }
+
+/* Style for the Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease;
 }
 
-
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
 
 
 /**responsive design **/
 @media screen and (max-width: 480px) { /* sm: */
+     /* General Fixes */
+     * {
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
     .name {
-      font-size: 45px; /* text-5xl */
-      text-align: center;
+        font-size: 70px !important; /* text-5xl */
+        margin: 0;
     }
-    .heading h1{
-        font-size: 45px;
+    main{
+        margin: 0;
+        padding: 8px 15px;
     }
-    #hero{
+    .social{
+        margin: 40px 0;
+    }
+    .tech{
+        height: auto;
+        font-size: 70px !important; /* text-5xl */
+    }
+    .techs{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Creates 2 equal-width columns */
+        gap: 10%;
+        width: 100%;
+        grid-auto-rows: auto; /* Each row is full viewport height */
+        margin-bottom: 100px;
+        height: auto; /* Make the grid container 100vh tall */
+    }
+    
+    .tech-card {
+        opacity: 0;
+        height: fit-content; /* Makes each card fill its row */
+        transform: scale(0.8) translateY(-25%); /* Start smaller and higher */
+        transition: opacity 1.0s ease-out, transform 1.5s ease-out;
+        box-sizing: border-box; /* Includes padding & border in height calculation */
+    }
+    .about{
+        height: auto;
+    }
+    .heading h1 {
+        font-size: 70px;
+    }
+    #hero {
         position: absolute;
         right: 0;
         top: 0;
         transform: translateY(50%);
-        width: 400px;
+        width: 100%;
         z-index: -100;
         background-color: transparent;
         animation: rotateHero 15s linear infinite; /* Apply the animation */
     }
+    form h1 {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        font-size: 70px;
+    }
+    
+    form h1 span {
+        color: transparent; /* Make the text itself transparent */
+        opacity: 1; /* Ensure the element is visible */
+        -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+    }
+    
+    form label {
+        color: white;
+        font-size: 20px;
+    }
+    
+    form button {
+        width: 50%;
+    }
+    
+    .getinTouch {
+        margin: 0;
+        border-bottom-color: gray;
+        border-bottom-width: 2px;
+        border-bottom-style: solid; /* Or dashed, dotted, etc. */
+    }
+    
+    .getinTouch h1 {
+        color: transparent; /* Make the text itself transparent */
+        opacity: 1; /* Ensure the element is visible */
+        -webkit-text-stroke: 1px #fff;
+        font-size: 70px;
+        margin: 0;
+    }
+    
+    .getinTouch p {
+        color: #fff;
+        margin: 0;
+        font-size: 30px;
+    }
+    footer {
+        display: block;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    footer h1 {
+        color: #fff;
+        font-family: cursive;
+        font-style: italic;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Tablet: */
+ 
+}
+
+@media screen and (max-width: 1024px) { /* Large Screens */
     
 }
-/*
-@media screen and (min-width: 640px) { 
-    .name {
-      font-size: 50px; 
-    }
+
+@media screen and (min-width: 1280px) { /* Desktops: */
+    
 }
-  
-@media screen and (min-width: 768px) {
-    .name {
-      font-size: 20px;
-    }
-}
-  
-@media screen and (min-width: 1280px) {
-    .name {
-      font-size: 25px;
-    }
-}
-*/
