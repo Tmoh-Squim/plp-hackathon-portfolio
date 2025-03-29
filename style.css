@@ -321,41 +321,46 @@ footer h1 {
     background-color: #0056b3;
 }
 
+.scroll-container {
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling until all cards are shown */
+}
+
 .projects {
-    width: 100%;
-    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    width: 400vw; /* Adjust width based on the number of slides */
+    height: 100vh;
+    position: relative;
+    transition: transform 0.5s ease-out;
 }
 
 .project-card {
+    width: 100vw; /* Full screen width per card */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: 80%;
-    margin: 80px auto; /* Controls vertical spacing */
-    opacity: 0;
-    transform: translateX(-50px); /* Start slightly off-screen */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.project-card.slide-in {
-    opacity: 1;
-    transform: translateX(0);
+.project-card img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .project-card h1 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #333;
+    color: white;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
-.projects img {
-    filter: grayscale(100%);
-    opacity: 0.5;
-    width: 100%;
-    border-radius: 20px;
-    display: block;
-    height: auto;
-}
+
 
 .projects img:hover{
     filter: grayscale(0);
@@ -502,6 +507,16 @@ footer h1 {
         font-size: 30px;
         cursor: pointer;
     }
+}
+
+/**about */
+.about-container{
+    padding: 3% 15%;
+}
+.about-me{
+    color: gray;
+    text-align: justify;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 768px) { /* Tablet: */
