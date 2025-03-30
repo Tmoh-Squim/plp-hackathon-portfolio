@@ -203,7 +203,7 @@ main {
     gap: 5%;
     margin-bottom: 100px;
     width: 100%;
-    grid-auto-rows: 100vh; /* Each row is full viewport height */
+    grid-auto-rows: 80vh; /* Each row is full viewport height */
     height: auto;
     padding-bottom: 50px;
     align-items: center; /* Ensures elements expand properly */
@@ -212,7 +212,6 @@ main {
 .tech-card {
     
     opacity: 0;
-    height: 100%; /* Makes each card fill its row */
     transform: scale(0.8) translateY(-25%); /* Start smaller and higher */
     transition: opacity 1.0s ease-out, transform 1.5s ease-out;
     box-sizing: border-box; /* Includes padding & border in height calculation */
@@ -278,7 +277,7 @@ form h1 span {
 
 form label {
     color: white;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 form input {
@@ -298,7 +297,7 @@ form input {
 }
 
 form button {
-    padding: 20px 15px; /* Shorthand for top, right, bottom, left */
+    padding: 20px 15px;
     border: none;
     width: 15%;
     border-radius: 8px;

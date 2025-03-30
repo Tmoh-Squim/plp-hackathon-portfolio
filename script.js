@@ -86,23 +86,6 @@ scrollToTopBtn.onclick = function () {
     behavior: "smooth",
   });
 };
-
-//project cards animation
-const projectsContainer = document.querySelector('.projects.auto-slide');
-const projectCards = document.querySelectorAll('.project-card');
-const numberOfCards = projectCards.length;
-
-// Dynamically set the width of the projects container
-projectsContainer.style.width = `${numberOfCards * 100}%`;
-
-// Optional: Pause on hover
-projectsContainer.addEventListener('mouseenter', () => {
-  projectsContainer.style.animationPlayState = 'paused';
-});
-
-projectsContainer.addEventListener('mouseleave', () => {
-  projectsContainer.style.animationPlayState = 'running';
-});
 //about me text animation
 
 document.addEventListener("DOMContentLoaded", function () {
