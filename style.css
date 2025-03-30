@@ -20,18 +20,17 @@ a {
 /**navbar styles*/
 nav {
     display: flex;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    justify-content: space-between;
     align-items: center;
-}
-
+    padding: 20px 50px;
+    align-items: center;
+    color: white;
+  }
 nav h1 {
     color: #fff;
     font-family: cursive;
     font-style: italic;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
 }
 
@@ -40,7 +39,59 @@ nav h1:hover {
     transition: all;
     transition: 0.3s;
 }
+.menu nav{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+.menu-button, .close-button {
+    font-size: 24px;
+    cursor: pointer;
+  }
 
+  .menu {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f0f0f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu.show {
+    transform: translateX(0);
+  }
+.menu nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    align-items: center;
+    color: white;
+}
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 3%;
+    align-items: end;
+}
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 90px;
+    margin: 10px 0;
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+  }
 /*main section styles*/
 main {
     padding-left: 50px;
@@ -317,7 +368,7 @@ footer h1 {
     color: #fff;
     font-family: cursive;
     font-style: italic;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
 }
 
@@ -367,6 +418,7 @@ footer h1 {
 .project-card img {
     width: 80%;
     height: 80%;
+    filter: grayscale(100%);
     object-fit: cover;
     border-radius: 20px;
 }
@@ -380,7 +432,15 @@ footer h1 {
     border-radius: 10px;
 }
 
-
+.name {
+    transform: translateY(100px);
+    opacity: 0; /* Ensure text starts hidden */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  .animate {
+    transform: translateY(0);
+    opacity: 1;
+  }
 
 .projects img:hover{
     filter: grayscale(0);
@@ -415,6 +475,7 @@ footer h1 {
     .name {
         font-size: 70px !important; /* text-5xl */
         margin: 0;
+        text-align: center;
     }
     main{
         margin: 0;
@@ -439,15 +500,30 @@ footer h1 {
         margin-bottom: 100px;
         height: auto; /* Make the grid container 100vh tall */
     }
-    .projects img{
-        width: 100%;
-        margin: 10px 0;
-    }
-    .project-card {
+    .projects {
+        display: block;
+        align-items: center;
+        width: 400vw; /* Adjust width based on the number of slides */
+        height: 100vh;
         position: relative;
-        width: 100%;
+        transition: transform 0.5s ease-out;
+    }
+    
+    .project-card {
+        width: 100%; /* Full screen width per card */
         height: auto;
-        margin: 0 auto;
+        display: flex;
+        margin: 10px 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .project-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
     }
     .tech-card {
         opacity: 0;
@@ -476,7 +552,8 @@ footer h1 {
         color: #fff;
         display: flex;
         flex-direction: column;
-        font-size: 70px;
+        font-size: 50px;
+        margin: 15px 0;
     }
     
     form h1 span {
@@ -535,6 +612,13 @@ footer h1 {
     height: 50% !important;
     margin: 3% 0;
     border-radius: 5px;
+   }
+   .contact-container{
+    min-height: 82vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px  15px !important;
 }
 }
 
@@ -580,6 +664,10 @@ footer h1 {
 }
 .get{
     margin: 0 3% !important;
+}
+.contact-container{
+    min-height: 100vh;
+    padding: 3%  15%;
 }
 @media screen and (max-width: 768px) { /* Tablet: */
  

@@ -17,7 +17,7 @@
 #hero {
     position: absolute;
     right: 10%;
-    top: 0;
+    top: -20%;
     transform: translateY(50%);
     width: 400px;
     z-index: -50;

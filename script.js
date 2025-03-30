@@ -2,6 +2,18 @@ const progressBar = document.querySelector(".progressbar");
 const cards = document.querySelectorAll(".tech-card");
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+const menuButton = document.querySelector(".menu-button");
+const closeButton = document.querySelector(".close-button");
+const menu = document.querySelector(".menu");
+
+menuButton.addEventListener("click", () => {
+  menu.classList.add("show");
+});
+
+closeButton.addEventListener("click", () => {
+  menu.classList.remove("show");
+});
+
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
   const windowHeight = window.innerHeight;
@@ -156,3 +168,17 @@ document.addEventListener("DOMContentLoaded", function () {
         expanded = !expanded;
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".name").forEach((el, index) => {
+      el.style.opacity = "0"; // Ensure text starts hidden
+      el.style.transform = "translateY(100px)"; // Initial position
+      el.style.transition = "transform 1s ease-out, opacity 1s ease-out"; // Ensure smooth transition
+      
+      setTimeout(() => {
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
+      }, index * 300);
+    });
+  });
+  

@@ -13,8 +13,25 @@
     <div class="progressbar"></div>
     <!---navbar section-->
     <nav>
-      <h1>TK</h1>
+      <h1>
+        <a href="#">TK</a>
+      </h1>
+      <div class="menu-button">☰</div>
     </nav>
+    
+    <div class="menu">
+      <nav>
+        <h1>
+          <a href="index.html">TK</a>
+        </h1>
+        <div class="close-button">✖</div>
+      </nav>
+      <div class="menu-container">
+        <a href="index.html">Home</a>
+      <a href="aboutMe.html">About</a>
+      <a href="contactMe.html">Contact</a>
+      </div>
+    </div>
     <main>
       <div class="about">
         <div>
@@ -24,13 +41,13 @@
             Full Stack
             <span> Mern Developer </span>
           </h1>
-          <img src="./assets/hero.png" id="hero" alt="hero-image" />
+          <img src="./assets/tri.png" id="hero" alt="hero-image" />
         </div>
       </div>
       <div class="social">
-        <a href="">linkedin</a>
-        <a href="">facebook</a>
-        <a href="">github</a>
+        <a href="https://github.com/Tmoh-Squim">github</a>
+        <a href="https://www.linkedin.com/in/timothy-kibunja-8789342a2">linkedin</a>
+        <a href="https://wa.me/2540748143442?text=">whatsapp</a>
       </div>
       <div class="work">
         <div class="heading">
@@ -42,22 +59,25 @@
           <a href="https:squimstech.vercel.app">
             <img src="/assets/ecom.png" alt="">
           </a>
-          <h1>Multivendor</h1>
+          <h1>Multivendor Ecommerce website</h1>
         </div>
          <div class="project-card">
-          <a href="https:squimstech.vercel.app">
+          <a href="https://weather-app-sooty-two-92.vercel.app/">
             <img src="/assets/weather_app.png" alt="">
           </a>
+          <h1>Real time Weather App</h1>
          </div>
          <div class="project-card">
-          <a href="https:squimstech.vercel.app">
+          <a href="https:squimhotel.vercel.app">
             <img src="/assets/hotel.png" alt="">
           </a>
+          <h1>Next js Hotel Booking Website</h1>
          </div>
          <div class="project-card">
-          <a href="https:squimstech.vercel.app">
+          <a href="https:kenchick.vercel.app">
             <img src="/assets/kenchick1.png" alt="">
           </a>
+          <h1>Food Ordering Website</h1>
          </div>
         </div>
        </div>
@@ -69,29 +89,13 @@
 
         <div class="techs">
           <div class="tech-card">
-           <div class="tech-container">
-            <img
-            src="data:image/png;base64,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"
-            alt="stack"
-          />
-          <div>
-            <p>/001</p>
-            <h1>Figma</h1>
-            <span>
-              Figma editor allows you to quickly create any website layout or
-              design
-            </span>
-          </div>
-           </div>
-          </div>
-          <div class="tech-card">
             <div class="tech-container">
               <img
               src="data:image/png;base64,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"
               alt="Stack"
             />
             <div>
-              <p>/002</p>
+              <p>/001</p>
               <h1>HTML</h1>
               <span>
                 Knowledge of hypertext markup allows you to create high-quality
@@ -107,7 +111,7 @@
               alt="stack"
             />
             <div>
-              <p>/003</p>
+              <p>/002</p>
               <h1>CSS</h1>
               <span>
                 Excellent knowledge of CSS allows you to create incredibly
@@ -123,7 +127,7 @@
               alt="stack"
             />
             <div>
-              <p>/004</p>
+              <p>/003</p>
               <h1>Javascript</h1>
               <span>
                 Javascript allows to add functionality in any website
@@ -138,7 +142,7 @@
             alt="stack"
           />
           <div>
-            <p>/005</p>
+            <p>/004</p>
             <h1>React JS</h1>
             <span>
               React JS is a Javascript library, helps you to build interactive
@@ -154,7 +158,7 @@
               alt="stack"
             />
             <div>
-              <p>/006</p>
+              <p>/005</p>
               <h1>Next JS</h1>
               <span>
                 FA React framework for server-side rendering and simplified
@@ -163,6 +167,22 @@
             </div>
             </div>
           </div>
+          <div class="tech-card">
+            <div class="tech-container">
+             <img
+             src="data:image/png;base64,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"
+             alt="stack"
+           />
+           <div>
+             <p>/006</p>
+             <h1>Node JS</h1>
+             <span>
+              Node Js enables developers to build fast, scalable, and efficient server-side applications,  
+              making it ideal for real-time web apps, APIs, and microservices.
+            </span>
+           </div>
+            </div>
+           </div>
       </div>
       <form action="">
         <h1>Contact <span>With Me Now</span></h1>
@@ -185,9 +205,9 @@
       <h1>TK</h1>
 
       <div class="social">
-        <a href="">linkedin</a>
-        <a href="">facebook</a>
-        <a href="">github</a>
+        <a href="https://github.com/Tmoh-Squim">github</a>
+        <a href="https://www.linkedin.com/in/timothy-kibunja-8789342a2">linkedin</a>
+        <a href="https://wa.me/2540748143442?text=">whatsapp</a>
       </div>
     </footer>
     <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
