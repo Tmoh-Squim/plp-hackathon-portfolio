@@ -10,18 +10,10 @@
     z-index: 11;
     transition: height 0.3s ease-out; /* Keep the smooth height transition */
     box-shadow: -2px 0 10px rgba(0, 138, 255, 0.7); /* Initial glow/shadow */
-    animation: progressBarColorChange 1s linear infinite; /* Apply the color animation */
-    animation: progressBarGlow 5s linear infinite; /* Apply the color animation */
+    animation: progressBarColorChange 2s linear infinite, progressBarGlow 2s linear infinite; /* Apply both animations */
 }
 
 #hero {
-    position: absolute;
-    right: 10%;
-    top: -20%;
-    transform: translateY(50%);
-    width: 400px;
-    z-index: -50;
-    background-color: transparent;
     animation: rotateHero 15s linear infinite; /* Apply the animation */
 }
 
@@ -47,7 +39,7 @@
         -webkit-text-stroke-color: #00ff00;
     }
     100% {
-        -webkit-text-stroke-color: #0000ff;
+        -webkit-text-stroke-color: orange;
     }
 }
 
@@ -56,7 +48,7 @@
         -webkit-text-stroke-color: #00ff00;
     }
     50% {
-        -webkit-text-stroke-color: #0000ff;
+        -webkit-text-stroke-color: orange;
     }
     100% {
         -webkit-text-stroke-color: #fff;
@@ -65,7 +57,7 @@
 
 @keyframes stroke-color-change3 {
     0% {
-        -webkit-text-stroke-color: #0000ff;
+        -webkit-text-stroke-color: orange;
     }
     50% {
         -webkit-text-stroke-color: #fff;
@@ -83,7 +75,6 @@
         transform: translateY(50%) rotate(360deg);
     }
 }
-
 @keyframes progressBarColorChange {
     0% {
         background-color: rgb(0, 138, 255);
@@ -104,18 +95,18 @@
 
 @keyframes progressBarGlow {
     0% {
-        background-color: rgb(0, 138, 255);
+        box-shadow: -2px 0 10px rgba(0, 138, 255, 0.7); /* Match initial background */
     }
     25% {
-        background-color: limegreen;
+        box-shadow: -2px 0 10px rgba(144, 238, 144, 0.7); /* Match limegreen */
     }
     50% {
-        background-color: gold;
+        box-shadow: -2px 0 10px rgba(255, 215, 0, 0.7);    /* Match gold */
     }
     75% {
-        background-color: tomato;
+        box-shadow: -2px 0 10px rgba(255, 99, 71, 0.7);     /* Match tomato */
     }
     100% {
-        background-color: rgb(0, 138, 255);
+        box-shadow: -2px 0 10px rgba(0, 138, 255, 0.7); /* Match initial background */
     }
 }

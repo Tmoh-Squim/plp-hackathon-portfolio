@@ -6,6 +6,21 @@ const menuButton = document.querySelector(".menu-button");
 const closeButton = document.querySelector(".close-button");
 const menu = document.querySelector(".menu");
 
+//name animation
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".name").forEach((el, index) => {
+      el.style.opacity = "0"; // Ensure text starts hidden
+      el.style.transform = "translateY(100px)"; // Initial position
+      el.style.transition = "transform 1s ease-out, opacity 1s ease-out"; // Ensure smooth transition
+      
+      setTimeout(() => {
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
+      }, index * 300);
+    });
+});
+  
+//display menu animation
 menuButton.addEventListener("click", () => {
   menu.classList.add("show");
 });
@@ -14,6 +29,7 @@ closeButton.addEventListener("click", () => {
   menu.classList.remove("show");
 });
 
+//progressbar scroll animation
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
   const windowHeight = window.innerHeight;
@@ -50,7 +66,6 @@ observer.observe(card);
 window.addEventListener("scroll", () => {
   lastScrollY = window.scrollY;
 });
-// Get the button
 
 // Show the button when scrolling down 200px
 window.onscroll = function () {
@@ -71,62 +86,24 @@ scrollToTopBtn.onclick = function () {
     behavior: "smooth",
   });
 };
-let currentSlide = 0;
+
+//project cards animation
+const projectsContainer = document.querySelector('.projects.auto-slide');
 const projectCards = document.querySelectorAll('.project-card');
-const totalSlides = projectCards.length;
-const projectsContainer = document.querySelector('.projects');
-let scrollingEnabled = false;
+const numberOfCards = projectCards.length;
 
-document.addEventListener("wheel", handleScroll, { passive: false });
-document.addEventListener("keydown", handleKeyNavigation);
-window.addEventListener("scroll", checkVisibility);
+// Dynamically set the width of the projects container
+projectsContainer.style.width = `${numberOfCards * 100}%`;
 
-function handleScroll(event) {
-if (!scrollingEnabled) return;
+// Optional: Pause on hover
+projectsContainer.addEventListener('mouseenter', () => {
+  projectsContainer.style.animationPlayState = 'paused';
+});
 
-let delta = event.deltaY > 0 ? 1 : -1;
-
-if (delta > 0 && currentSlide < totalSlides - 1) {
-  currentSlide++;
-  updateSlide();
-  event.preventDefault();
-} else if (delta < 0 && currentSlide > 0) {
-  currentSlide--;
-  updateSlide();
-  event.preventDefault();
-} else {
-  scrollingEnabled = false; // Allow natural scrolling after last project
-}
-}
-
-function handleKeyNavigation(event) {
-if (!scrollingEnabled) return;
-
-if (event.key === "ArrowRight" && currentSlide < totalSlides - 1) {
-  currentSlide++;
-  updateSlide();
-} else if (event.key === "ArrowLeft" && currentSlide > 0) {
-  currentSlide--;
-  updateSlide();
-}
-}
-
-function checkVisibility() {
-const rect = projectsContainer.getBoundingClientRect();
-if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-  scrollingEnabled = true;
-  if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-      currentSlide = totalSlides - 1;
-      updateSlide();
-  }
-} else {
-  scrollingEnabled = false;
-}
-}
-
-function updateSlide() {
-projectsContainer.style.transform = `translateX(-${currentSlide * 100}vw)`;
-}
+projectsContainer.addEventListener('mouseleave', () => {
+  projectsContainer.style.animationPlayState = 'running';
+});
+//about me text animation
 
 document.addEventListener("DOMContentLoaded", function () {
     const aboutMe = document.querySelector(".about-me");
@@ -168,17 +145,3 @@ document.addEventListener("DOMContentLoaded", function () {
         expanded = !expanded;
     });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".name").forEach((el, index) => {
-      el.style.opacity = "0"; // Ensure text starts hidden
-      el.style.transform = "translateY(100px)"; // Initial position
-      el.style.transition = "transform 1s ease-out, opacity 1s ease-out"; // Ensure smooth transition
-      
-      setTimeout(() => {
-        el.style.opacity = "1";
-        el.style.transform = "translateY(0)";
-      }, index * 300);
-    });
-  });
-  
