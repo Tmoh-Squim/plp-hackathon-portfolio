@@ -18,8 +18,8 @@
    nav {
        display: flex;
        padding-left: 20px;
-       padding-right: 20px;
-       padding-top: 20px;
+       padding-right: 10px !important;
+       padding-top: 10px !important;
        padding-bottom: 20px;
        align-items: center;
    }
@@ -142,7 +142,8 @@
    footer {
        display: block;
        gap: 20px;
-       align-items: center;
+       padding-left: 10px;
+       padding-right: 10px;
    }
    
    footer h1 {
@@ -188,10 +189,7 @@
     }
     nav {
         display: flex;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 20px !important;
         align-items: center;
     }
     .name {
@@ -317,9 +315,10 @@
     }
     footer {
         display: block;
-        gap: 30px;
-        align-items: center;
-    }
+        gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    } 
     
     footer h1 {
         color: #fff;
