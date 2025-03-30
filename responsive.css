@@ -94,13 +94,7 @@
        font-size: 70px;
    }
    #hero {
-       position: absolute;
-       right: 0;
-       top: -50%;
-       transform: translateY(50%);
-       width: 100%;
-       z-index: -100;
-       background-color: transparent;
+       display: none;
    }
    form h1 {
        color: #fff;
@@ -206,13 +200,8 @@
         text-align: center;
     }
     #hero {
-        position: absolute;
-        right: 10%;
-        top: -40%;
-        transform: translateY(50%);
-        width: 400px;
-        z-index: -50;
-        background-color: transparent;
+        display: none;
+
     }
     main{
         margin: 0;
