@@ -31,7 +31,7 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 ## 📜 How to Use
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Tmoh-Squim/plp-hackathon-portfolio-project.git
+   git clone https://github.com/Tmoh-Squim/plp-hackathon-portfolio.git
    ```
 2. Open `index.html` in your browser or deploy it using a static site host.
 3. Customize content by editing the `.html` and `.css` files.
