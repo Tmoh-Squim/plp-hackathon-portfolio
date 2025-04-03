@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="keyframes.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/css/all.min.css">
     <title>Timothy Kibunja - Full Stack Mern Developer</title>
   </head>
   <body>
@@ -20,7 +21,7 @@
       <h1>
         <a href="#">TK</a>
       </h1>
-      <div class="menu-button">☰</div>
+      <div class="menu-button"><i class="fas fa-bars"></i></div>
     </nav>
     
     <div class="menu">
@@ -28,10 +29,10 @@
         <h1>
           <a href="index.html">TK</a>
         </h1>
-        <div class="close-button">✖</div>
+        <div class="close-button"><i class="fas fa-times"></i></div>
       </nav>
       <div class="menu-container">
-        <a href="index.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="aboutMe.html">About</a>
       <a href="resume.html">Resume</a>
       <a href="contactMe.html">Contact</a>
@@ -61,8 +62,9 @@
 
       <!-- Download CV Button -->
       <div class="download-cv-btn">
-        <a href="">Download Cv</a>
-      </div>
+        <a href="assets/Squim-cv.pdf" download="Timothy_Kibunja_CV.pdf">Download Cv</a>
+    </div>
+    
 
       <!-- Projects Section -->
       <div class="work">
@@ -75,27 +77,46 @@
         <!-- Project Cards -->
         <div class="project-card">
           <a href="https://squimstech.vercel.app">
-            <img src="./assets/ecom.png" alt="">
+            <video src="assets/vokoscreenNG-2025-04-03_12-41-11.mp4" autoplay loop muted playsinline></video>
           </a>
           <h1>Multivendor Ecommerce website</h1>
+          <p>A powerful marketplace platform where multiple vendors can list, sell, and manage their products seamlessly.</p>
+          <div class="project-card-links">
+            <a href="https://squimstech.vercel.app">Visit</a>
+          </div>
         </div>
          <div class="project-card">
           <a href="https://weather-app-sooty-two-92.vercel.app/">
-            <img src="./assets/weather_app.png" alt="">
+            <video src="assets/vokoscreenNG-2025-04-03_12-47-04.mp4" autoplay loop muted playsinline></video>
           </a>
           <h1>Real time Weather App</h1>
+          <p>Get live weather updates, forecasts, and temperature trends for any location using a modern weather API.</p>
+          <div class="project-card-links">
+            <a href="https://squimstech.vercel.app">Visit</a>
+            <a href="https://github.com/Tmoh-Squim/weather_app.git">Source code</a>
+          </div>
          </div>
          <div class="project-card">
           <a href="https://squimhotel.vercel.app">
-            <img src="./assets/hotel.png" alt="">
+            <video src="assets/vokoscreenNG-2025-04-03_12-49-23.mp4" autoplay loop muted playsinline></video>
           </a>
           <h1>Next js Hotel Booking Website</h1>
+          <p>Book hotel rooms in real-time with a seamless UI, secure payments, and an interactive search system.</p>
+          <div class="project-card-links">
+            <a href="https://squimhotel.vercel.app">Visit</a>
+            <a href="https://github.com/Tmoh-Squim/hotel-management-system.git">Source code</a>
+          </div>
          </div>
          <div class="project-card">
           <a href="https://kenchick.vercel.app">
             <img src="./assets/kenchick1.png" alt="">
           </a>
           <h1>Food Ordering Website</h1>
+          <p>Order delicious meals from top restaurants with a user-friendly interface and fast delivery service.</p>
+          <div class="project-card-links">
+            <a href="https://kenchick.vercel.app">Visit</a>
+            <a href="https://github.com/Tmoh-Squim/Kenchick-project.git">Source code</a>
+          </div>
          </div>
         </div>
        </div>
@@ -219,7 +240,7 @@
     </section>
 
        <!-- Contact Form -->
-      <form action="">
+      <form onsubmit="sendEmail(); return false;">
         <h1>Contact <span>With Me Now</span></h1>
         <label for="name">NAME*</label>
         <input type="text" required />
@@ -252,7 +273,7 @@
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
-    
+
     <!-- JavaScript File -->
     <script src="script.js"></script>
   </body>

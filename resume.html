@@ -5,23 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Education & Experience</title>
-    <link rel="stylesheet" href="./styles/resume.css">
+    <link rel="stylesheet" href="styles/resume.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="keyframes.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/css/all.min.css">
+
 </head>
 <body>
     <div class="scrollPath"></div>
     <div class="progressbar"></div>
 
-    <!--- Navbar -->
+    <!-- Navbar -->
     <nav>
-        <h1><a href="index.html">TK</a></h1>
-        <div class="menu-button">☰</div>
-    </nav>
-    
-    <div class="menu">
+        <h1>
+          <a href="index.html">TK</a>
+        </h1>
+        <div class="menu-button"><i class="fas fa-bars"></i></div>
+      </nav>
+      
+      <div class="menu">
         <nav>
-            <h1><a href="index.html">TK</a></h1>
-            <div class="close-button">✖</div>
+          <h1>
+            <a href="index.html">TK</a>
+          </h1>
+          <div class="close-button"><i class="fas fa-times"></i></div>
         </nav>
         <div class="menu-container">
             <a href="index.html">Home</a>
@@ -72,21 +80,40 @@
                 </ul>
             </div>
         </section>
-
-        <!-- Interests Section -->
-        <section id="interests">
-            <h2>Interests</h2>
-            <ul>
-                <li>Ethical hacking & cybersecurity</li>
-                <li>AI-driven trading strategies</li>
-                <li>Building high-performance mobile apps</li>
-                <li>Developing decentralized applications (dApps)</li>
-                <li>Music production & Afrobeat remixing</li>
-                <li>Ethical AI development & automation</li>
-                <li>Open-source contributions & security research</li>
-            </ul>
-        </section>
     </div>
+    
+    <!-- Skills Section -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <p class="skill-name">HTML & CSS</p>
+            <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+        </div>
+        <div class="skill">
+            <p class="skill-name">JavaScript</p>
+            <div class="progress-bar"><div class="progress" style="width: 93%;"></div></div>
+        </div>
+        <div class="skill">
+            <p class="skill-name">React & Next.js</p>
+            <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+        </div>
+        <div class="skill">
+            <p class="skill-name">Node Js & Exress.js</p>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+            <p class="skill-name">Socket.io</p>
+            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill">
+            <p class="skill-name">React Native</p>
+            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+            <p class="skill-name">Kotlin & KMM</p>
+            <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>

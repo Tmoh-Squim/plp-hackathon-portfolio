@@ -228,6 +228,7 @@
     .projects {
         display: block;
         align-items: center;
+        height: auto;
         position: relative;
         transition: transform 0.5s ease-out;
     }
@@ -344,4 +345,16 @@
     justify-content: center;
     padding: 10px  15px !important;
  }
+}
+ /* Responsive Flexbox Layout for Large Screens */
+ @media (min-width: 768px) {
+    .resume-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #education, #experience {
+        flex: 1;
+        margin: 0 10px;
+    }
 }

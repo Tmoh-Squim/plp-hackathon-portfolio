@@ -3,92 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    
+    <!-- External CSS Files -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="keyframes.css">
     <link rel="stylesheet" href="responsive.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/css/all.min.css">
 </head>
 <body>
+  <!-- Scroll indicators -->
   <div class="scrollPath"></div>
   <div class="progressbar"></div>
-  <!---navbar section-->
+  
+  <!-- Navbar Section -->
   <nav>
     <h1>
       <a href="index.html">TK</a>
     </h1>
-    <div class="menu-button">☰</div>
+    <div class="menu-button"><i class="fas fa-bars"></i></div>
   </nav>
   
+  <!-- Mobile Menu -->
   <div class="menu">
     <nav>
       <h1>
         <a href="index.html">TK</a>
       </h1>
-      <div class="close-button">✖</div>
+      <div class="close-button"><i class="fas fa-times"></i></div>
     </nav>
     <div class="menu-container">
       <a href="index.html">Home</a>
-    <a href="aboutMe.html">About</a>
-    <a href="contactMe.html">Contact</a>
+      <a href="aboutMe.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="contactMe.html">Contact</a>
     </div>
   </div>
+  
+  <!-- About Me Section -->
   <div class="about-container">
-    <h1>
-      About Me
-    </h1>
+    <h1>About Me</h1>
     <p class="info">
-      I'm a passionate and innovative Frontend developer with a flair for creating exceptional user experiences. I love to do vercetile work and give the design and minimal outlook throught my code.
+      I'm a passionate and innovative Frontend developer with a flair for creating exceptional user experiences. 
+      I love to do versatile work and give the design a minimal outlook through my code.
     </p>
+    
+    <!-- Profile Image -->
     <img src="./assets/hero.jpg" alt="profile" class="profile">
     
+    <!-- About Me Details -->
     <div class="about-me">
       <p>
-        I am a passionate React developer, dedicated to shaping the digital world through innovative and user-centric web applications. With a strong command of JavaScript, HTML, and CSS, I have embarked on an exciting journey of transforming design visions into seamless, interactive experiences on the web.
+        I am a passionate React developer, dedicated to shaping the digital world through innovative and user-centric web applications. 
+        With a strong command of JavaScript, HTML, and CSS, I transform design visions into seamless, interactive experiences on the web.
       </p>
       <p>
-        My work revolves around harnessing the power of React, a cutting-edge JavaScript library, to build robust and efficient front-end solutions. I thrive on tackling complex challenges, whether it's optimizing performance, enhancing user interfaces, or integrating third-party APIs. Each project I undertake is an opportunity to explore new possibilities and refine my skills in the ever-evolving world of web development.
-
+        My work revolves around harnessing the power of React to build robust and efficient front-end solutions. 
+        I enjoy tackling challenges such as optimizing performance, enhancing UI/UX, and integrating APIs.
       </p>
-    <p>
-      In addition to my technical prowess, I'm a problem solver and a creative thinker. I take pride in my ability to collaborate effectively with cross-functional teams, ensuring that the end product not only meets but exceeds client and user expectations. User experience is at the forefront of my work, and I constantly strive to deliver intuitive and visually appealing applications.
-
-    </p>
-    <p>
-      The fast-paced nature of the tech industry is a constant source of motivation for me. I am always eager to learn about emerging technologies and best practices to stay ahead of the curve. My goal as a React developer is not just to write code but to craft digital experiences that leave a lasting impression on users.
-
-    </p>
+      <p>
+        In addition to my technical expertise, I am a problem solver and creative thinker. 
+        I collaborate effectively with teams to deliver intuitive and visually appealing applications.
+      </p>
+      <p>
+        I constantly explore emerging technologies and best practices to stay ahead in the ever-evolving tech industry. 
+        My goal is to craft digital experiences that leave a lasting impact on users.
+      </p>
+      <p>
+        I see myself as a catalyst for change, building applications that meet business needs while enhancing the online experience. 
+        Excited to push boundaries as a React developer!
+      </p>
+    </div>
     
-  <p>
-    In a world where digital presence is paramount, I see myself as a catalyst for change, creating web applications that not only meet the functional needs of businesses but also elevate the overall online experience. I am excited to continue my journey as a React developer, pushing boundaries and making a meaningful impact in the digital realm.
-
-  </p>
-</div>
-       <a href="contactMe.html"> <button type="submit" class="btn">LET'S TALK</button></a>
-    
+    <!-- Contact Button -->
+    <a href="contactMe.html"><button type="submit" class="btn">LET'S TALK</button></a>
   </div>
 
+  <!-- Contact Section -->
   <div class="get">
     <div class="getinTouch">
       <h1>Get in touch</h1>
       <p>timooh3214@gmail.com</p>
     </div>
-  </main>
+  </div>
   
+  <!-- Footer Section -->
   <footer>
     <h1>
       <a href="index.html">TK</a>
     </h1>
-  
     <div class="social">
-      <a href="https://github.com/Tmoh-Squim">github</a>
-      <a href="https://www.linkedin.com/in/timothy-kibunja-8789342a2">linkedin</a>
-      <a href="https://wa.me/2540748143442?text=">whatsapp</a>
+      <a href="https://github.com/Tmoh-Squim">GitHub</a>
+      <a href="https://www.linkedin.com/in/timothy-kibunja-8789342a2">LinkedIn</a>
+      <a href="https://wa.me/2540748143442?text=">WhatsApp</a>
     </div>
   </footer>
-  </div>
-<button id="scrollToTopBtn" class="scroll-to-top">↑</button>
-
+  
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
+  
+  <!-- JavaScript File -->
   <script src="script.js"></script>
 </body>
 </html>
