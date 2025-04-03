@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <!-- Link to external CSS files -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="keyframes.css">
     <link rel="stylesheet" href="responsive.css">
     <title>Timothy Kibunja - Full Stack Mern Developer</title>
   </head>
   <body>
+    <!-- Scroll indicators -->
     <div class="scrollPath"></div>
     <div class="progressbar"></div>
     <!---navbar section-->
@@ -30,11 +33,13 @@
       <div class="menu-container">
         <a href="index.html">Home</a>
       <a href="aboutMe.html">About</a>
+      <a href="resume.html">Resume</a>
       <a href="contactMe.html">Contact</a>
       </div>
     </div>
     <main>
       <div class="about">
+        <!-- Hero Section -->
         <div>
           <h1 class="name">Timothy <span>Kibunja</span></h1>
 
@@ -45,19 +50,31 @@
           <img src="./assets/hero.png" id="hero" alt="hero-image" />
         </div>
       </div>
+
+      <!-- Social Links -->
       <div class="social">
         <a href="https://github.com/Tmoh-Squim">github</a>
         <a href="https://www.linkedin.com/in/timothy-kibunja-8789342a2">linkedin</a>
         <a href="https://wa.me/2540748143442?text=">whatsapp</a>
       </div>
+      <br />
+
+      <!-- Download CV Button -->
+      <div class="download-cv-btn">
+        <a href="">Download Cv</a>
+      </div>
+
+      <!-- Projects Section -->
       <div class="work">
         <div class="heading">
           <h1 class="">Projects</h1>
         </div>
        <div class="scroll-wrapper">
          <div class="projects">
+
+        <!-- Project Cards -->
         <div class="project-card">
-          <a href="https:squimstech.vercel.app">
+          <a href="https://squimstech.vercel.app">
             <img src="./assets/ecom.png" alt="">
           </a>
           <h1>Multivendor Ecommerce website</h1>
@@ -69,13 +86,13 @@
           <h1>Real time Weather App</h1>
          </div>
          <div class="project-card">
-          <a href="https:squimhotel.vercel.app">
+          <a href="https://squimhotel.vercel.app">
             <img src="./assets/hotel.png" alt="">
           </a>
           <h1>Next js Hotel Booking Website</h1>
          </div>
          <div class="project-card">
-          <a href="https:kenchick.vercel.app">
+          <a href="https://kenchick.vercel.app">
             <img src="./assets/kenchick1.png" alt="">
           </a>
           <h1>Food Ordering Website</h1>
@@ -83,6 +100,8 @@
         </div>
        </div>
       </div>
+
+        <!-- Technology Stack Section -->
         <h1 class="tech">
           Technology
           <span> Stack </span>
@@ -113,9 +132,9 @@
             />
             <div>
               <p>/002</p>
-              <h1>CSS</h1>
+              <h1>CSS/TAILWIND</h1>
               <span>
-                Excellent knowledge of CSS allows you to create incredibly
+                Excellent knowledge of CSS and Tailwind css allows you to create incredibly
                 beautiful sites
               </span>
             </div>
@@ -162,7 +181,7 @@
               <p>/005</p>
               <h1>Next JS</h1>
               <span>
-                FA React framework for server-side rendering and simplified
+                React framework for server-side rendering and simplified
                 routing and much more
               </span>
             </div>
@@ -184,6 +203,22 @@
             </div>
            </div>
       </div>
+
+       <!-- Interests Section -->
+      <section id="interests">
+        <h2>Interests</h2>
+        <ul>
+            <li>Ethical hacking & cybersecurity</li>
+            <li>AI-driven trading strategies</li>
+            <li>Building high-performance mobile apps</li>
+            <li>Developing decentralized applications (dApps)</li>
+            <li>Music production & Afrobeat remixing</li>
+            <li>Ethical AI development & automation</li>
+            <li>Open-source contributions & security research</li>
+        </ul>
+    </section>
+
+       <!-- Contact Form -->
       <form action="">
         <h1>Contact <span>With Me Now</span></h1>
         <label for="name">NAME*</label>
@@ -195,12 +230,14 @@
         <button type="submit">SEND</button>
       </form>
 
+      <!-- Get in Touch Section -->
       <div class="getinTouch">
         <h1>Get in touch</h1>
         <p>timooh3214@gmail.com</p>
       </div>
     </main>
 
+    <!-- Footer Section -->
     <footer>
       <h1>
         <a href="index.html">Tk</a>
@@ -212,7 +249,11 @@
         <a href="https://wa.me/2540748143442?text=">whatsapp</a>
       </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
+    
+    <!-- JavaScript File -->
     <script src="script.js"></script>
   </body>
 </html>

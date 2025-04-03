@@ -49,6 +49,7 @@
        width: 100%;
        grid-auto-rows: auto; /* Each row is full viewport height */
        margin-bottom: 100px;
+       overflow-y: hidden;
        height: auto; /* Make the grid container 100vh tall */
    }
    .projects {

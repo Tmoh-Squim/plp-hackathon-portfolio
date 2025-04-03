@@ -67,9 +67,9 @@ nav h1:hover {
     transition: transform 0.3s ease-in-out;
   }
 
-  .menu.show {
+.menu.show {
     transform: translateX(0);
-  }
+}
 .menu nav{
     display: flex;
     justify-content: space-between;
@@ -87,7 +87,7 @@ nav h1:hover {
   .menu a {
     color: white;
     text-decoration: none;
-    font-size: 90px;
+    font-size: 75px;
     margin: 10px 0;
     color: transparent; /* Make the text itself transparent */
     opacity: 1; /* Ensure the element is visible */
@@ -235,7 +235,23 @@ main {
     border-top: 2px solid gray;
     padding: 10px 20px;
 }
-
+.download-cv-btn {
+    display: inline-block; /* Allows for padding and width/height control */
+    background-color: #007bff; /* Example blue color */
+    color: white;
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-decoration: none; /* Remove default link underline */
+    border-radius: 5px; /* Add rounded corners */
+    font-weight: bold; /* Make the text stand out */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+}
+.download-cv-btn a{
+    color: black;
+}
+.download-cv-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
 .tech-card img {
     max-width: 100px;
     height: auto;
@@ -504,4 +520,91 @@ footer h1 {
 .contact-container{
     min-height: 100vh;
     padding: 3%  15%;
+}
+
+
+
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.education-item, .experience-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.education-item h3, .experience-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.education-item .institution, .experience-item .company {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.education-item .duration, .experience-item .duration {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.experience-item li {
+    margin-bottom: 5px;
+}
+
+/* Interests Section Styles */
+#interests {
+    background: #121212;
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+#interests h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+#interests ul {
+    list-style: none;
+    padding: 0;
+}
+#interests li {
+    font-size: 18px;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+#interests li:last-child {
+    border-bottom: none;
 }
