@@ -28,7 +28,9 @@
 .social a:last-child {
     animation: stroke-color-change3 3s infinite alternate; /* Add an animation */
 }
-
+.download-cv-btn{
+    animation: cvBtnColorChange 3s infinite alternate; /* Add an animation */
+}
 
 /* Keyframes */
 @keyframes stroke-color-change {
@@ -108,5 +110,22 @@
     }
     100% {
         box-shadow: -2px 0 10px rgba(0, 138, 255, 0.7); /* Match initial background */
+    }
+}
+@keyframes cvBtnColorChange {
+    0% {
+        border-color: rgb(0, 138, 255);
+    }
+    25% {
+        border-color: limegreen;
+    }
+    50% {
+        border-color: gold;
+    }
+    75% {
+        border-color: tomato;
+    }
+    100% {
+        border-color: rgb(0, 138, 255);
     }
 }

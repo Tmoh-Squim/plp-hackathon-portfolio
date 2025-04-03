@@ -37,6 +37,9 @@
        align-items: start;
        margin: 40px 0;
    }
+   .download-cv-btn{
+    width: 100%;
+   }
    .tech{
        height: auto;
        font-size: 70px !important; /* text-5xl */

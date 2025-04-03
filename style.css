@@ -238,20 +238,20 @@ main {
 }
 .download-cv-btn {
     display: inline-block; /* Allows for padding and width/height control */
-    background-color: #007bff; /* Example blue color */
     color: white;
+    border: solid 2px;
     padding: 10px 20px; /* Adjust padding as needed */
     text-decoration: none; /* Remove default link underline */
-    border-radius: 5px; /* Add rounded corners */
+    border-radius: 20px; /* Add rounded corners */
     font-weight: bold; /* Make the text stand out */
     transition: background-color 0.3s ease; /* Smooth hover effect */
     cursor: pointer;
 }
-.download-cv-btn a{
-    color: black;
+.download-cv-btn:hover{
+    background: rgb(8, 117, 8);
 }
-.download-cv-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+.download-cv-btn a{
+    color: white;
 }
 .tech-card img {
     max-width: 100px;
