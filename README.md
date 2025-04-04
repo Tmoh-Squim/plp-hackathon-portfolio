@@ -41,6 +41,8 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 ![Desktop Screenshot](assets/desktop.png)
 ### 📱 Mobile View:
 ![Mobile Screenshot](assets/mobile.png)
+### Live Link
+https://tmoh-squim.github.io/plp-hackathon-portfolio
 
 ## 📬 Contact
 Feel free to reach out to me:
