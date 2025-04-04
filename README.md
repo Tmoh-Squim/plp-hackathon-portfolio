@@ -25,7 +25,7 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 
 ## 🛠️ Technologies Used
 - **HTML5**
-- **CSS3 (Flexbox, Grid, Animations, Media Queries, TailwindCSS)**
+- **CSS3 (Flexbox, Grid, Animations, Media Queries)**
 - **JavaScript (ES6, DOM Manipulation, Event Listeners)**
 
 ## 📜 How to Use
